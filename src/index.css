@@ -52,6 +52,50 @@ All colors MUST be HSL.
     --glass-bg: hsl(240 15% 12% / 0.7);
     --glass-border: hsl(0 0% 100% / 0.1);
   }
+
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 240 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 20% 10%;
+
+    --primary: 270 80% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 195 100% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 330 80% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 240 10% 95%;
+    --muted-foreground: 240 5% 40%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 90%;
+    --input: 240 10% 90%;
+    --ring: 270 80% 55%;
+
+    /* Custom gradients for light mode */
+    --gradient-primary: linear-gradient(135deg, hsl(270 80% 55%), hsl(240 80% 55%), hsl(195 100% 45%));
+    --gradient-secondary: linear-gradient(45deg, hsl(330 80% 55%), hsl(270 80% 55%));
+    --gradient-accent: linear-gradient(90deg, hsl(195 100% 45%), hsl(270 80% 55%));
+    
+    /* Glow effects for light mode */
+    --glow-primary: 0 0 30px hsl(270 80% 55% / 0.3);
+    --glow-secondary: 0 0 25px hsl(195 100% 45% / 0.3);
+    --glow-accent: 0 0 20px hsl(330 80% 55% / 0.25);
+    
+    /* Glass morphism for light mode */
+    --glass-bg: hsl(0 0% 100% / 0.7);
+    --glass-border: hsl(240 10% 70% / 0.2);
+  }
 }
 
 @layer base {
@@ -61,6 +105,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground overflow-x-hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   html {
